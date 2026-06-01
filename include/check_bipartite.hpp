@@ -4,10 +4,11 @@
 #ifndef INCLUDE_CHECK_BIPARTITE_HPP_
 #define INCLUDE_CHECK_BIPARTITE_HPP_
 
-#include <graph.hpp>
+
 #include <queue>
 #include <unordered_map>
 #include <vector>
+#include <graph.hpp>
 
 namespace graph {
 
