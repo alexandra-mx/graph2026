@@ -12,10 +12,14 @@
 #include <nlohmann/json.hpp>
 #include "test_core.hpp"
 
+static void TestBipartitePath(httplib::Client* cli);
+static void TestNonBipartiteTriangle(httplib::Client* cli);
+static void TestRandomBipartite(httplib::Client* cli);
+
 /**
  * @brief Главная функция запуска набора тестов.
  */
-    void TestCheckBipartite(httplib::Client * cli) 
+void TestCheckBipartite(httplib::Client * cli) 
 {
     TestSuite suite("TestCheckBipartite");
     RUN_TEST_REMOTE(suite, cli, TestBipartitePath);
