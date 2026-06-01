@@ -109,6 +109,7 @@ include_directories(${GRAPH_INCLUDE_DIRS})
 
 add_executable(
   graph_server
+  include/check_bipartite.hpp
   include/graph.hpp
   include/iterators.hpp
   include/oriented_graph.hpp
@@ -116,6 +117,7 @@ add_executable(
   include/weighted_oriented_graph.hpp
   methods/main.cpp
   methods/methods.hpp
+  methods/check_bipartite_method.cpp
 )
 
 ####################################################################
@@ -135,11 +137,13 @@ target_link_libraries(graph_server ${GRAPH_LIBS})
 
 add_executable(
   graph_test
+  include/check_bipartite.hpp
   include/graph.hpp
   include/iterators.hpp
   include/oriented_graph.hpp
   include/weighted_graph.hpp
   include/weighted_oriented_graph.hpp
+  tests/check_bipartite_test.cpp
   tests/graph_test.cpp
   tests/io.hpp
   tests/main.cpp
