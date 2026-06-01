@@ -76,7 +76,6 @@ static void TestRandomBipartite(httplib::Client* cli) {
 
   for (size_t i = 0; i < n / 2; ++i) {
     for (size_t j = n / 2; j < n; ++j) {
-
       if (distrib(gen) % 2 == 0) {
         input["edges"].push_back({i, j});
       }
